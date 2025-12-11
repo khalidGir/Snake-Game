@@ -1,0 +1,95 @@
+/* ============================
+   SNAKE GAME - SLEEK DESIGN
+   ============================ */
+
+/* 1. Body: Center game, dark gradient background, modern font */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #1e1e1e, #2e2e2e);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* 2. Canvas: Rounded corners, subtle shadow, borderless for minimalism */
+canvas {
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+}
+
+/* 3. Snake: Neon green color, glowing effect, smooth transitions */
+.snake {
+  background-color: #00ff00;
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+  transition: transform 0.1s ease;
+}
+
+/* 4. Food: Vibrant contrasting color (e.g., magenta or cyan), soft glow */
+.food {
+  background-color: #ff00ff;
+  box-shadow: 0 0 10px rgba(255, 0, 255, 0.5);
+  transition: transform 0.1s ease;
+}
+
+/* 5. Score: Fixed position, bold modern font, semi-transparent background */
+.score {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+/* 6. Responsive: Ensure game looks great on all screen sizes */
+@media (max-width: 600px) {
+  canvas {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* 7. Animations: Add subtle transitions for snake movement and food spawn */
+.snake,
+.food {
+  transition: transform 0.1s ease;
+}
+
+/* 8. Game Over: Overlay with blur and stylish restart button */
+.game-over {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}   
+
+/* Add your stylish CSS below! */
+.game-over button {
+  background-color: #ff4500;
+  border: none;
+  padding: 10px 20px;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.game-over button:hover {
+  background-color: #ff6347;
+}
+/* ============================
+   END OF SNAKE GAME CSS
+   ============================ */
